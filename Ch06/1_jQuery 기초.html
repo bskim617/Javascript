@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1_jQuery 기초</title>
+    <!--
+        날짜 : 2022/10/11
+        이름 : 김보성
+        내용 : jQuery 기초 실습하기
+    -->
+
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script>
+        //alert('1');
+
+        // HTML 페이지의 로드 완류 후 실행
+        window.onload = function(){
+            //alert('2');
+            let city = document.getElementById('city');
+            let li = city.getElementsByTagName('li');
+            li[0].style.color= 'blue';     
+
+
+        };
+
+        // HTML 페이지 문서객체 준비 완료 후 실행
+        $(document).ready(function(){
+            $('#city > li:nth-child(2)').css('color','orange');
+        });
+
+    </script>
+    
+</head>
+<body>
+    <h3>javascript vs jQuery</h3>
+
+    <ul id="city">
+        <li>서울</li>
+        <li>대전</li>
+        <li>대구</li>
+        <li>부산</li>
+        <li>광주</li>
+    </ul울>
+
+
+</body>
+</html>
+<script>
+    //alert('3');
+
+    // 자바스크립트
+    let city = document.getElementById('city');
+    let li = city.getElementsByTagName('li');
+    li[3].style.color= 'blue'; 
+
+    // 제이쿼리 = jQuery(), $()
+    $('#city > li:nth-child(5)').css('color','orange');
+
+</script>
